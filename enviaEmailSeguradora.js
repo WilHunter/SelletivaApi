@@ -6,6 +6,7 @@ const sendgridApiKey = wordKeys.SENDGRID_API_KEY
 const emailSendUrl = wordKeys.SEND_URL
 
 module.exports.enviar = (dado) => {
+  console.info(dado)
   const mensagem = {
     personalizations: [
       {
@@ -48,6 +49,7 @@ module.exports.enviar = (dado) => {
     },
     data: mensagem,
   })
+  
 }
 
 
