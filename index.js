@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const routes = require('./routes/routes')
-
+const port = process.env.PORT || 3000
 const app = express()
 
 app.use(express.json())
@@ -14,6 +14,6 @@ app.use((req, res, next) =>{
 })
 app.use(routes)
 
-app.listen(2020, () => {
-    console.log(`Experss started http://localhost:2020`)
+app.listen(port, () => {
+    console.log(`Experss started http://localhost:5000`)
   })
